@@ -1,0 +1,13 @@
+.content {
+  grid-area: c;
+  background-color: papayawhip;
+  height: 100%;
+}
+.content-background img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.descriptionBlock {
+  padding: 10px;
+}

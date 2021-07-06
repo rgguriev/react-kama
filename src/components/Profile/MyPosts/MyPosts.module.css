@@ -1,0 +1,26 @@
+.content {
+  grid-area: c;
+  background-color: papayawhip;
+  height: 100%;
+}
+.content-background img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.posts {
+  background-color: #e2dcdc;
+  margin-top: 10px;
+}
+
+.item {
+  color: #0a3be0;
+}
+.item.active {
+  color: #b54141;
+}
+
+.postsBlock {
+  padding: 10px;
+}

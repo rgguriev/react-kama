@@ -1,0 +1,24 @@
+.content {
+  grid-area: c;
+  background-color: coral;
+  height: 100%;
+}
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+.dialogsItems {
+  padding: 10px;
+}
+.dialogsItems .active {
+  color: teal;
+}
+.dialog {
+
+}
+.messages {
+  padding: 10px;
+}
+.message {
+
+}
