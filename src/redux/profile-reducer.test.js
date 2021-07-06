@@ -19,7 +19,7 @@ test('new post should be added', () => {
   expect(newState.posts.length).toBe(4);
 });
 
-test('new post should it-kama test', () => {
+test('new post should it-kama test2', () => {
   // 1. test data
   let action = addPostAC('it-kama');
 
