@@ -4,7 +4,7 @@ import image from "../../../components/common/Preloader/preloader.svg";
 const Preloader = () => {
   return (
     <div>
-      <img src={image}/>
+      <img src={image} alt="preloader"/>
     </div>
   );
 };

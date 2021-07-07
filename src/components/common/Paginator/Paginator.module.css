@@ -1,0 +1,8 @@
+.pages {
+    height: 20px;
+}
+.selectedPage {
+    font-weight: 900;
+    margin: 0 5px;
+}
+

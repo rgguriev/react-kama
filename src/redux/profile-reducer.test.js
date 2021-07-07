@@ -38,5 +38,5 @@ test('after deleting length of messages should be decremented', () => {
   let newState = profileReducer(initialState, action);
 
   // 3. expectation
-  expect(newState.posts.length).toBe(3);
+  expect(newState.posts.length).toBe(2);
 });

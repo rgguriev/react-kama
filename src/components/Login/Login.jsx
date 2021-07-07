@@ -1,7 +1,7 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
-import {Input, Textarea} from "../common/FormsControls/FormsControls";
-import {maxLengthCreator, required} from "../../utils/validators/validators";
+import {reduxForm} from 'redux-form';
+import {createField, Input} from "../common/FormsControls/FormsControls";
+import {maxLengthCreator} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {login, logout} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
@@ -9,20 +9,14 @@ import s from "./../common/FormsControls/FormsControls.module.css"
 
 let maxLength20 = maxLengthCreator(20);
 
-export const LoginForm = (props) => {
+export const LoginForm = ({handleSubmit, error}) => {
   return (
-    <form onSubmit={props.handleSubmit}>
-      <div>
-        <Field placeholder={"Email"} name={"email"} component={Input} validate={[required, maxLength20]}/>
-      </div>
-      <div>
-        <Field placeholder={"Password"} name={"password"} component={Input} validate={[required, maxLength20]} type={"password"}/>
-      </div>
-      <div>
-        <Field placeholder={Input} name={"rememberMe"} component="checkbox"/> remember me
-      </div>
-      { props.error && <div className={s.formSummaryError}>
-        {props.error}
+    <form onSubmit={handleSubmit}>
+      {createField("Email", "email", maxLength20, Input, [])}
+      {createField("Password", "password", maxLength20, Input, {type: "password"})}
+      {createField(null, "rememberMe", maxLength20, Input, {type: "checkbox"}, "remember me", {value: true})}
+      {error && <div className={s.formSummaryError}>
+        {error}
       </div> }
       <div>
         <button>Login</button>
