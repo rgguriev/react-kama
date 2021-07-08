@@ -38,6 +38,6 @@ describe("ProfileStatus component", () => {
     const component = create(<ProfileStatus status="it-kama" updateStatus={mockCallback} />); // если этот компонент вызовит фейковую функцию, то мы это узнаем
     const instance = component.getInstance(); // дай нам инстанс
     instance.deactivateMode(); // в этом объекте есть метод deactivateEditMode, если он вызовется, то должен вызваться и этот колбэк
-    expect(mockCallback.mock.calls.length).toBe(1); // calss - сколько раз мы вызвали функцию mockCallback, ожидаем 1 раз
+    expect(mockCallback.mock.calls.length).toBe(1); // cals - сколько раз мы вызвали функцию mockCallback, ожидаем 1 раз
     });
 });
